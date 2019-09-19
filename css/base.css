@@ -1,0 +1,105 @@
+/* 版心的公共类 */
+.w {
+  width: 1190px;
+  margin: 0 auto;
+}
+.fr{
+  float:right;
+}
+.fl{
+  float: left;
+}
+body{
+  background: #f6f6f6;
+}
+.f10{
+  color: #f10215;
+}
+ul,h1{
+  /* 去掉列表项的圆点或数字 */
+  list-style: none;
+  /* 去掉列表项自带的margin */
+margin: 0;
+padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #999;
+}
+a:hover{
+  color: #c81623;
+}
+/* header部分 */
+header{
+  height:80px;
+  background:#020000;
+}
+/* 快速导航栏 begin */
+.shortcut{
+  background-color: #e3e4e5;
+  /* 直接输入bgc即可 */
+  height: 30px;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+  line-height: 30px;
+  color: #999;
+
+}
+/* .shortcut a{
+  text-decoration: none;
+  
+} */
+.shortcut li{
+  float: left;
+}
+.space{
+  width: 1px;
+  height: 10px;
+  background-color: #ccc;
+  margin: 10px 12px 0;
+}
+.city{
+  margin-left: 200px;
+}
+.mobile{
+  position: relative;
+}
+.mobile img{
+  position: absolute;
+  left:-3px;
+  top: 24px;
+  border: 1px solid #ccc;
+  padding: 3px;
+}
+/* 快速导航栏 end */
+/* 中间大部分 */
+.middle{
+  height: 140px;
+  position: relative;
+}
+/* 一般logo用背景图不用Img标签 */
+.logo{
+  /* margin-top: -30px; */
+  /* 用margin的话会把整个middle带上去，所以要采用给logo定位的形式 */
+  position:absolute;
+  top:-30px;
+  left: 0;
+  box-shadow: 0px -10px 10px 5px rgba(0,0,0, .1)
+}
+.logo a{
+  display: block;
+  background:#fff url(../images/logo.png) no-repeat;
+  width: 190px;
+  height: 170px;
+}
+.form{
+  width: 550px;
+  height: 35px;
+  background-color: pink;
+  /* 不要用定位，后面还有很多内容，这里应该是纯定位 */
+  position: absolute;
+  top:25px;
+  left:320px;
+
+}
