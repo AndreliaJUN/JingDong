@@ -15,7 +15,12 @@ body{
 .f10{
   color: #f10215;
 }
-ul,h1{
+input,button{
+  border:0;
+  outline: none;
+  /* 去掉点击输入框产生的蓝边 */
+}
+ul,h1,p,input,button{
   /* 去掉列表项的圆点或数字 */
   list-style: none;
   /* 去掉列表项自带的margin */
@@ -73,6 +78,7 @@ header{
   padding: 3px;
 }
 /* 快速导航栏 end */
+
 /* 中间大部分 */
 .middle{
   height: 140px;
@@ -96,10 +102,81 @@ header{
 .form{
   width: 550px;
   height: 35px;
-  background-color: pink;
+  /* background-color: pink; */
   /* 不要用定位，后面还有很多内容，这里应该是纯定位 */
   position: absolute;
   top:25px;
   left:320px;
-
+}
+/* 搜索框 */
+.form input{
+  width: 495px;
+  height: 33px;
+  /* background-color: skyblue; */
+  border: 1px solid #f10215;
+  float: left;
+  font-size: 14px;
+  padding-left:3px;
+  /* padding-top: 0; 
+  padding-bottom: 0;  */
+}
+.form button{
+  /* 行内元素会有空隙，浮动就是用来解决这个问题的，虽然input+button刚好等于div的宽度，但是button会掉下来就是因为这个 */
+  width: 50px;
+  height: 35px;
+  background-color: #f10215;
+  float: right;
+}
+.form button span{
+  font-size: 14px;
+  color:#ffffff;
+}
+/* 购物车 */
+.shopCar{
+  width: 188px;
+  height: 33px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 25px;
+  right: 95px;
+  background-color: #fff;
+  line-height: 33px;
+  /* 行高设成和元素高度一样可使文字上下居中 */
+  text-align: center;
+  color: #f10215;
+}
+.shopCar i{
+  font-family: 'icomoon';
+  margin-right: 5px;
+  font-style: normal;
+}
+.shopCar span{
+  width: 15px;
+  height: 15px;
+  background-color:#f10215;
+  border-radius: 50%;
+  position: absolute;
+  /* 加了绝对定位、固定定位、浮动的行内元素，可以不用转化，直接给宽度和高度 */
+  top: 5px;
+  right: 30px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 15px;
+  /* 如果不设行高，那么0不能完全被显示出来，它继承了33的行高，改成15可使它垂直居中 */
+}
+/* 关键词 */
+.hotWords{
+  position:absolute;
+  top: 68px;
+  left: 320px;
+  font-size: 14px;
+}
+/* 小导航 */
+.navItems{
+width: 770px;
+height: 40px;
+background-color: purple;
+position:absolute;
+bottom: 0;
+left: 200px;
 }
