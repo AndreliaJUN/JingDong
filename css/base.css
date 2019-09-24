@@ -19,7 +19,9 @@ body {
 .f10 {
   color: #f10215 !important;
 }
-
+img{
+  vertical-align: top;
+}
 input,
 button {
   border: 0;

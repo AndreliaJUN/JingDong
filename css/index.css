@@ -1,0 +1,171 @@
+.grid {
+  height: 480px;
+}
+
+.grid-col1 {
+  width: 190px;
+  height: 100%;
+  background-color: #6e6568;
+  color: #fff;
+  font-size: 14px;
+  /* 不是给字的，是给/的 */
+}
+
+.grid-col1 a {
+  /* 给链接文字的 */
+  color: #fff;
+  font-size: 14px;
+  margin: 0 3px;
+}
+.grid-col1 a:hover{
+  color: #f10215;
+}
+.grid-col1 ul {
+  padding: 10px 0;
+}
+
+.grid-col1 ul li {
+  /* 因为有一个鼠标经过的效果所以这里不能使用margin，padding用来占位 */
+  padding-left: 12px;
+/* 高度是从一行字的底部量到下一行字的底部 */
+height: 29px;
+line-height: 26px;
+}
+.grid-col1 ul li:hover{
+  background-color: #9c9698;
+}
+.grid-col2 {
+  width: 790px;
+  height: 100%;
+  margin-left: 10px;
+}
+
+.grid-col3 {
+  width: 190px;
+  height: 100%;
+}
+/* banner部分 */
+.grid-col2-b div{
+  float: left;
+  margin-top: 10px;
+}
+.grid-col2-b div:last-child{
+  float: right;
+  margin-top: 10px;
+}
+/* 箭头部分 */
+.grid-col2-t{
+  position: relative;
+}
+.arrow-l,
+.arrow-r{
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 60px;
+  background-color:rgba(0, 0, 0, .3);
+  transform: translateY(-50%);
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, .6);
+  font-family: arial;
+  font-weight: normal;
+}
+.arrow-r{
+  right: 0;
+}
+.circle{
+  width: 167px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, .3);
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  padding-left: 8px;
+}
+.circle li{
+  /* 权重为10+1=11 */
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  float: left;
+  margin: 4px;
+  cursor: pointer;
+  /* 鼠标经过li的时候变成小手 */
+}
+/* 此处要注意权重问题，如果只有.current（权重为10）那么颜色改变不了 */
+.circle .current{
+background-color: #f10215;
+}
+.login{
+  height: 85px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  padding: 15px;
+}
+.login-t{
+  width: 95px;
+  height: 60px;
+  font-size: 12px;
+  line-height: 20px;
+  white-space: nowrap;
+  /* 强制一行内显示 */
+  overflow: hidden;
+  /* 溢出隐藏 */
+  text-overflow: ellipsis;
+  /* 超出的部分显示省略号 */
+  color:#666;
+  padding-left:60px;
+  /* 这里给padding值把文字挤过去 */
+  position: relative;
+}
+.login-t a{
+  color: #666;
+}
+.login-t a:hover{
+  color: #f10215;
+}
+.login-b a{
+  display:inline-block;
+  width: 70px;
+  height: 20px;
+  border: 2px solid #f10215;
+  margin-right: 3px;
+  text-align: center;
+  line-height: 20px;
+  color: #f10215;
+  font-weight: 600;
+}
+.login-b a:hover{
+  background-color: #f10215;
+  color: white;
+}
+.user-info{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  /* 如果给图片一个圆角没有问题，但是这是给盒子一个圆角，那么得把多余的给裁剪一下 */
+  overflow: hidden;
+  background: url(../images/sprite_userinfo@1x.png) no-repeat -70px 0;
+}
+.user-info img{
+  width: 40px;
+  border-radius: 50%;
+  margin: 5px;
+}
+.news{
+  height: 155px;
+  border-bottom: 1px solid #ccc;
+  background-color: purple;
+}
+.expand{
+  height: 208px;
+  background-color: skyblue;
+}
