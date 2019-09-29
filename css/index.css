@@ -9,8 +9,30 @@
   color: #fff;
   font-size: 14px;
   /* 不是给字的，是给/的 */
+  position: relative;
 }
-
+.ad{
+  width: 250px;
+  height: 480px;
+  /* background-color: pink; */
+  position: absolute;
+  left: -250px;
+  top:0;
+}
+.ad-r{
+  position: absolute;
+  /* posa */
+  top: 0;
+  left: 250;
+  z-index: 999;
+  width: 0;
+  height: 480px;
+  background: url(../images/ad-r.jpg);
+  transition: all 0.8s;
+}
+.ad:hover .ad-r{
+  width: 999px;
+}
 .grid-col1 a {
   /* 给链接文字的 */
   color: #fff;
@@ -163,9 +185,95 @@ background-color: #f10215;
 .news{
   height: 155px;
   border-bottom: 1px solid #ccc;
-  background-color: purple;
+  background-color: #fff;
+  padding: 7px 13px 0;
+  box-sizing: border-box;
+  /* 因为添加padding后盒子变大，那么如果想让总高度不变可以减小height或者采用box-sizing */
+
+}
+.news-t{
+  height: 19px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.news-t a{
+  float: left;
+  height: 17px;
+  line-height: 17px;
+}
+.cx{
+  width: 38px;
+  border-right: 1px solid #ccc;
+}
+.gg{
+  margin-left: 15px;
+}
+.news-t .more{
+  /* 类名只写more会有权重不够的问题 */
+  float: right;
+}
+.news-t div{
+  height: 2px;
+  width: 28px;
+  background-color: #f10215;
+  /* 这个线是压住底部灰色的线的，所以要用定位 */
+  position: absolute;
+  bottom: -1px;
+}
+.news-b{
+  padding-top: 15px;
+  line-height: 23px;
 }
 .expand{
   height: 208px;
-  background-color: skyblue;
+  background-color: #fff;
+  overflow: hidden;
+  /* 因为每个li都有边框，最右边多了一像素，所以让它隐藏起来 */
+  /* expand继承了父亲190宽度 */
 }
+.expand ul{
+  width: 195px;
+  /* 父亲宽是190，但是里面的li放不开所以重定义ul的宽度 */
+}
+.expand li{
+  width: 47px;
+  height: 69px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  float:left;
+}
+.expand li a{
+  display: block;
+  padding-top: 15px;
+  /* 这里用padding不用margin，因为这个样式是指到这个盒子里面都是小手的形状，所以要用padding占位填充，如果使用的是margin那么指到图片上方就不是链接没有小手了 */
+  text-align: center;
+}
+.expand li i{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background: url(../images/sprite_fs@1x.png) no-repeat;
+  width: 18px;
+  height: 23px;
+  background-position: -5px -88px;
+}
+.expand li:first-child i{
+  width: 18px;
+  height: 23px;
+  /* background-color: pink; */
+  background-position: -5px -88px;
+  /* display: block;
+  margin: 0 auto;
+  margin-bottom: 10px; */
+}
+/* .expand li:nth-child(2) i{
+  width: 18px;
+  height: 23px;
+  background-position: -5px -88px;
+}
+.expand li:nth-child(3) i{
+  width: 18px;
+  height: 23px;
+  background-position: -10px -88px;
+}
+ */
